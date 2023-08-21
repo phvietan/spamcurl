@@ -23,15 +23,15 @@ func main() {
 	}()
 
 	args := os.Args
-	args[0] = "curl"
 	for _, arg := range args {
 		if arg == "-h" {
 			fmt.Printf("Usage: %s [options...] <url>\nWill spam 'curl' command until receive SIGINT\nBelow is curl help\n==============================================\n", args[0])
+			args[0] = "curl"
 			syscall.Exec(path, args, os.Environ())
 			break
 		}
 	}
-
+	args[0] = "curl"
 	for {
 		pid, _, _ := syscall.Syscall(syscall.SYS_FORK, 0, 0, 0)
 		if pid == 0 {
