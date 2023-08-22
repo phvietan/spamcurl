@@ -3,7 +3,7 @@ A package to spam 'curl' command. Mainly used for checking if a single request c
 
 # Installation
 
-`$ go install github.com/phvietan/spamcurl@v1.0.1`
+`$ go install github.com/phvietan/spamcurl@latest`
 
 # Usage
 
