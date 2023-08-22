@@ -1,3 +1,3 @@
 module github.com/phvietan/spamcurl
 
-go 1.12.0
+go 1.12
